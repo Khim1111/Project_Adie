@@ -366,7 +366,7 @@
   } */
 
 
-  .row img{
+  /* .row img{
     margin-top: 9em;
     margin-right: 5rem;
     
@@ -378,8 +378,11 @@
   .bio-1 {
 
     
-  } 
+  }  */
+/************************************* END OF ABOUTPAGE ***************************************************************/
 
+
+/************************************* START OF DISCOGRAPHYPAGE ***************************************************************/
 
 .album-container{
 margin-top:10em ;
@@ -474,20 +477,7 @@ margin-left: 5rem;
     border-radius: 50%;
     background-color: #010101;
   }
-  /* .modal-body {
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  background:transparent !important;
-  margin-top: -25;
-  padding: 0;
-  }
-  
-  #modal-image {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-  } */
+
 
   .modal-content {
     background-color: transparent;
@@ -518,4 +508,34 @@ margin-left: 5rem;
     opacity: 0.7;
   }
   
+
+
   
+  
+  #thumbnail-gallery {
+    background-color: #f2f2f2;
+    padding: 40px 0;
+  } 
+ .album-title{
+    text-align: center;
+   
+  }
+  
+  #thumbnail-gallery .col {
+    margin-bottom: 20px;
+    margin-right: 5rem;
+    
+  
+  }
+  
+  #thumbnail-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+
+   .row{
+    justify-content: center;
+    align-items: center;
+   }
