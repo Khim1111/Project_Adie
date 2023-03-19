@@ -21,6 +21,42 @@
   }
 }
 
+  
+@font-face {
+  font-family: adie;
+  src: url(./fonts/quentin.otf);
+}
+
+:root {
+  --font-color: #f1f1f1;
+  --font-color-2: #010101;
+  --font-color-3: #6e1c6d3f;
+  
+  --color-bg: #ECF2FF;
+  --primary-color: #BFACE2;
+  --accent-color: #655DBB;
+  --tertiary-color: #3E54AC;
+
+  --small-font-size: 0.6rem;
+  --normal-font-size: 1rem;
+  --header-font-size: 1.5rem;
+  --title-font-size: 5.5rem;
+  --light-weight: 300;
+  --normal-weight: 400;
+  --semi-bold: 500;
+  --header-weight: 600;
+  --title-weight: 700;
+  --subrayada: 'Monstserrat Subrayda', sans-serif;
+  --button-radius: 0.2rem;
+ }
+
+*, *::after, *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 .navbar{
   background-color: none;
 }
@@ -128,7 +164,7 @@
   .title {
     font-size: var(--title-font-size);
     font-weight: var(--title-weight);
-    font-family: 'Adie',sans-serif;
+    font-family: adie, sans-serif !important;
     text-transform: capitalize;
     color: white;
   
@@ -204,41 +240,7 @@
       font-size: 3rem;
     }
   } 
-  
-  @font-face {
-    font-family: 'Adie';
-    src: url('/src/fonts/Quentin.otf');
-  }
-  
-  :root {
-    --font-color: #f1f1f1;
-    --font-color-2: #010101;
-    --font-color-3: #6e1c6d3f;
-    
-    --color-bg: #ECF2FF;
-    --primary-color: #BFACE2;
-    --accent-color: #655DBB;
-    --tertiary-color: #3E54AC;
-  
-    --small-font-size: 0.6rem;
-    --normal-font-size: 1rem;
-    --header-font-size: 1.5rem;
-    --title-font-size: 5.5rem;
-    --light-weight: 300;
-    --normal-weight: 400;
-    --semi-bold: 500;
-    --header-weight: 600;
-    --title-weight: 700;
-    --subrayada: 'Monstserrat Subrayda', sans-serif;
-    --button-radius: 0.2rem;
-   }
-  
-  *, *::after, *::before{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
+
   .home-container {
     width: 100%;
     height: 100vh;
@@ -353,63 +355,15 @@
   }
 
   
-  /*<<<<<<<<<<<<<<<<<<<<<<<<< END FOOTER >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+  /*<<<<<<<<<<<<<<<<<<<<<<<<< END OF FOOTER >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
  
 /************************************* END OF HOMEPAGE ***************************************************************/
- 
-/************************************* START OF ABOUTPAGE ***************************************************************/
 
-/* /* .biography p{
-    margin-top: 8rem;
-    margin-left: 8rem; 
- flex-direction: column;
-  } */
-
-
-  /* .row img{
-    margin-top: 9em;
-    margin-right: 5rem;
-    
-  } 
-  .col{
-    margin-top: 20em;
-    margin-right: 5rem;
-  }
-  .bio-1 {
-
-    
-  }  */
-/************************************* END OF ABOUTPAGE ***************************************************************/
 
 
 /************************************* START OF DISCOGRAPHYPAGE ***************************************************************/
 
-.album-container{
-margin-top:10em ;
-margin-left: 5rem;
-}
-
-.album-details {
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  
-} 
-.album-details ol{
-  padding-left: 0;
-  margin: 0;
-
-}
-
-.music-bg{
-  background-color: #010101;
-}
-
-.album-caption{
-  margin-right: 5rem;
-}
-
+/*<<<<<<<<<<><< START OF SECTION 1 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
 
 .album-container{
@@ -429,113 +383,238 @@ margin-left: 5rem;
     margin: 0;
   
   }
-  
-  .music-bg{
-    background-color: #010101;
-  }
+
   
   .album-caption{
     margin-right: 5rem;
   }
   
   
-  .video-container {
-    position: relative;
-  }
   
-  .thumbnail-overlay {
-    position: absolute;
-    color: var(--color-bg);
-    top: 11rem;
-    left: 17em;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
-  }
-  
-  .video-container:hover .thumbnail-overlay {
-    opacity: 25;
-  }
-  
-  .thumbnail-overlay img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  margin-top: 0;
-  padding: 0;
-  }
-  
-  .icons {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .icons .btn {
-    margin: 0 10px;
-    border-radius: 50%;
-    background-color: #010101;
-  }
-
-
-  .modal-content {
-    background-color: transparent;
-    border: none;
-  }
-  
-  .modal-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: transparent;
-  }
-  
-  #modal-image {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-  }
-  
-  .close {
-    color: white;
-    opacity: 1;
-    transition: opacity 0.2s;
-  }
-  
-  .close:hover {
-    opacity: 0.7;
-  }
-  
-
-
-  
-  
-  #thumbnail-gallery {
-    background-color: #f2f2f2;
-    padding: 40px 0;
-  } 
- .album-title{
-    text-align: center;
-   
-  }
-  
-  #thumbnail-gallery .col {
-    margin-bottom: 20px;
-    margin-right: 5rem;
+  .album-container{
+    margin-top:10em ;
+    margin-left: 5rem;
+    }
     
+    .album-details {
+    
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+    } 
+    .album-details ol{
+      padding-left: 0;
+      margin: 0;
+    
+    }
+    
+    .music-bg{
+      background-color: #010101;
+    }
+    
+    .album-caption{
+      margin-right: 5rem;
+    }
+    
+    
+    .video-container {
+      position: relative;
   
-  }
+    }
+    
+    .thumbnail-overlay {
+      position: absolute;
+      color: var(--color-bg);
+      top: 11rem;
+      left: 17em;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: all 0.5s ease-in-out;
+    }
+    
+    .video-container:hover .thumbnail-overlay {
+      opacity: 25;
+      transition: width 0.1s, opacity 0.4s;
+    }
+    
+    .thumbnail-overlay img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    margin-top: 0;
+    padding: 0;
+    }
+    
+    .icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    
+    .icons .btn {
+      margin: 0 10px;
+      border-radius: 50%;
+      background-color: #010101;
+    }
   
-  #thumbnail-gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
+  
+    .modal-content {
+      background-color: transparent;
+      border: none;
+    }
+    
+    .modal-body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: transparent;
+    }
+    
+    #modal-image {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 80%;
+    }
+    
+    .close {
+      color: white;
+      opacity: 1;
+      transition: opacity 0.2s;
+    }
+    
+    .close:hover {
+      opacity: 0.7;
+    }
+    /*<<<<<<<<<<><< END OF SECTION 2 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+  
+    /*<<<<<<<<<<><< START OF SECTION 2 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+    
+    
+    #thumbnail-gallery {
+      background-color: #f2f2f2;
+      padding: 40px 0;
+    } 
+   .album-title{
+      text-align: center;
+     
+    }
+    
+    #thumbnail-gallery .col {
+      margin-bottom: 20px;
+      margin-right: 5rem;
+      margin-top: 5rem;
+  
+    }
+    
+    #thumbnail-gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+  
+  
+     .row{
+      justify-content: center;
+      align-items: center;
+     }
+  
+     /************************************* END OF DISCOGRAPHYPAGE ***************************************************************/
 
 
-   .row{
-    justify-content: center;
-    align-items: center;
-   }
+ 
+/************************************* START OF ABOUTPAGE ***************************************************************/
+.about-title{
+  font-family: adie, sans-serif !important;
+}
+
+/* Center the carousel and set its height */
+#carouselExampleControls {
+  height: 400px;
+  margin: 0 auto;
+}
+
+/* Make the carousel images fill the available height */
+.carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Set the background color of the active carousel indicator */
+.carousel-indicators .active {
+  background-color: #007bff;
+}
+
+/* Style the image grid */
+.row {
+  margin-top: 20px;
+}
+
+.col-md-4 {
+  padding: 10px;
+}
+
+.col-md-4 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+/************************************* END OF ABOUTPAGE ***************************************************************/
+.video-latest {
+  text-align: center;
+  max-width: 100%;
+}
+
+/*  */
+
+.gallery-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.gallery-image:hover::before {
+  opacity: 1;
+}
+
+.gallery-image::after {
+  content: 'View Image';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.gallery-image:hover::after {
+  opacity: 1;
+}
+
+
+
+
