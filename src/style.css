@@ -545,6 +545,20 @@
 
  
 /************************************* START OF ABOUTPAGE ***************************************************************/
+
+.about-page{
+
+    background-color: var(--font-color-2) !important;
+    background: url(../src/img/about_bg.jpeg)no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: var(--font-color);
+
+    
+}
+
 .about-title{
   font-family: adie, sans-serif !important;
 }
@@ -636,3 +650,13 @@
 
 
 
+/* bookin */
+form{
+  margin: 0 auto;
+  marg
+  max-width: 500px;
+  min-width: 300px;
+  width: 60vw;
+  padding-bottom: 2em;
+
+}
