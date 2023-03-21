@@ -12,12 +12,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
   <link rel="stylesheet" href="../src/style.css">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="../src/js/bootstrap.bundle.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  
   <script src="../src/main.js"></script>
 </head>
 
@@ -75,7 +72,7 @@
             <img src="../src/img/bookings_img.png" class="img-fluid" alt="about-image">
           </div>
           <div class="col-md-6 d-flex g-1">
-            <form class="row g-3">
+            <form class="row g-3" name="submit-to-google-sheet">
                 
                 <div class="col-md-1">
                     <h1 class="about-title"><b>Adie</b></h1>
@@ -86,12 +83,12 @@
                   </div>
                 <div class="col-md-6">
                   <label for="name" class="form-label">Event Name</label>
-                  <input type="name" class="form-control" id="event" placeholder="Event Name">
+                  <input name="Event Name" type="name" class="form-control" id="event" placeholder="Event Name">
                 </div>
                     <div class="col-md-6">
                         <label for="date" class="form-label">Event Date</label>
                         <div class="input-group date" id="datepicker" >
-                            <input type="text" class="form-control" placeholder="Select your preferred date">
+                            <input name="Event Date" type="text" class="form-control" placeholder="Select your preferred date">
                             <span class="input-group-append">
                                 <span class="input-group-text bg-white d-block">
                                     <i class="fa fa-calendar"></i>
@@ -101,31 +98,31 @@
                     </div>
                 <div class="col-md-6">
                     <label for="text" class="form-label">Organizer</label>
-                    <input type="text" class="form-control" id="organizer" placeholder="Organizer">
+                    <input name="Organizer" type="text" class="form-control" id="organizer" placeholder="Organizer">
                   </div>
                   <div class="col-md-6">
                     <label for="text" class="form-label">Event Platform</label>
-                    <input type="text" class="form-control" id="platform" placeholder="Event Platform">
+                    <input name="Event Platform"type="text" class="form-control" id="platform" placeholder="Event Platform">
                   </div>
                   <div class="col-md-6">
                     <label for="name" class="form-label">Contact Details</label>
-                    <input type="name" class="form-control" id="contact-name" placeholder="e.g. Juan Dela Cruz">
+                    <input name="Contact Name" type="name" class="form-control" id="contact-name" placeholder="e.g. Juan Dela Cruz">
                   </div>
                   <div class="col-md-6">
                     <label for="text" class="form-label">Company</label>
-                    <input type="text" class="form-control" id="company" placeholder="Company Name">
+                    <input name="Company" type="text" class="form-control" id="company" placeholder="Company Name">
                   </div>
                   <div class="col-md-6">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                    <input name="Email" type="email" class="form-control" id="email" placeholder="name@example.com">
                   </div>
                   <div class="col-md-6">
-                    <label for="number" class="form-label">Phone</label>
-                    <input type="number" class="form-control" id="number" placeholder="Contact Number">
+                    <label for="text" class="form-label">Phone</label>
+                    <input name="Phone" type="text" class="form-control" id="number" placeholder="Contact Number">
                   </div>
                 <div class="col-12">
                     <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Type your message here..." required></textarea>
+                    <textarea name="Message"  class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Type your message here..." required></textarea>
                 </div>
                 
                 <div class="col-12">
@@ -152,13 +149,31 @@
 
 
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="../src/js/bootstrap.bundle.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
 <script type="text/javascript">
     $(function() {
         $('#datepicker').datepicker();
     });
 </script>
+<script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbyEhgsmMN72onesj7lpcz1mfaLO05CS80x1BV-9B5_4I_IeF1t-dhiXRPBSg2qSh1s/exec'
+  const form = document.forms['submit-to-google-sheet']
 
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response =>{
+        form.reset()
+       console.log('Success!', response)
+  })
+      .catch(error => console.error('Error!', error.message))
+  });
+</script>
 
-  
 </body>
 </html>
