@@ -489,7 +489,7 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background-color: transparent;
+      background-color: transparent;..
     }
     
     #modal-image {
@@ -518,6 +518,7 @@
     } 
    .album-title{
       text-align: center;
+      margin-top: 5rem;
      
     }
     
@@ -651,12 +652,35 @@
 
 
 /* bookin */
-form{
+/* form{
   margin: 0 auto;
-  marg
+ 
   max-width: 500px;
   min-width: 300px;
   width: 60vw;
   padding-bottom: 2em;
 
+} */
+
+
+/* video */
+
+$aspect-ratios: (
+  "1x1": 100%,
+  "4x3": calc(3 / 4 * 100%),
+  "16x9": calc(9 / 16 * 100%),
+  "21x9": calc(9 / 21 * 100%)
+);
+
+
+.myCarousel{
+  margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-vid{
+  justify-content: center;
+  justify-content: center;
+  align-items: center;
 }
