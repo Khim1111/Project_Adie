@@ -58,7 +58,9 @@
 }
 
 
-
+.navbar ul li {
+  list-style-type: none;
+  }
 
 
 .nav-link.active,
@@ -202,52 +204,7 @@
     transition: 0.5s ease-in-out;
   }
   
-  @media (min-width: 1200px) {
-    /* .title-container h1 {
-      font-size: 8rem;
-    } */
 
-  } 
-  @media (max-width: 1199px) {
-    /* .title-container h1 {
-      font-size: 8rem;
-    }
-    .title-container {
-      position: absolute;
-    } */
-  }
-  @media (min-width: 1000px) and (max-width: 1150px) {
-    /* .title-container h1   .home-container .background-img{
-      font-size: 5.5rem;
-    } */
-  }
-  @media (min-width: 880px) and (max-width: 999px) {
-    /* .title-container h1 {
-      font-size: 5rem;
-      font-weight: 500;
-    } */
-  }
-  @media (min-width: 770px) and (max-width: 879px) {
-    /* .title-container h1 {
-      font-size: 4.5rem;
-  
-    } */
-  }
-  @media (min-width: 580px) and (max-width: 769px) {
-    /* .title-container h1 {
-      font-size: 4rem;
-    } */
-  }
-  @media (min-width: 500px) and (max-width: 579px) {
-    /* .title-container h1 {
-      font-size: 3.5rem;
-    } */
-  }
-  @media (min-width: 320px) and (max-width: 499px) {
-    /* .title-container h1 {
-      font-size: 3rem;
-    } */
-  } 
 
   .home-container {
     width: 100%;
@@ -611,24 +568,21 @@
   font-size: 18px;
 }
 /************************************* END OF GALLERY PAGE ***************************************************************/
-.navbar ul li {
-  list-style-type: none;
-  display: inline;
-  }
 
-  .nav-link{
+
+  /* .nav-link{
       padding: 0 1rem;
-  }
-  .navigation-bar a:hover {
+  } */
+  /* .navigation-bar a:hover {
       background-color: #ddd;
-      color: black;
-    }
+      color: var(--font-color);
+    } */
 
-    .active {
+    /* .active {
       text-decoration: underline;
      text-underline-offset: 0.5rem;
   
-    }
+    } */
 
 
 /************************************* START OF BOOKINGS PAGE ***************************************************************/
