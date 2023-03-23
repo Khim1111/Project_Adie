@@ -292,7 +292,7 @@
   
   @media screen and (max-width: 991px) {
     /* Hide video element */
-    .home-container video {
+    .home-container video{
       display: none;
     }
     
@@ -301,8 +301,8 @@
      {
       display: flex;
     }
-    
   }
+
   
   /*<<<<<<<<<<><< END OF TITLE AND VIDEO STYLING >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
   
