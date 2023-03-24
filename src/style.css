@@ -159,7 +159,28 @@
 
 /*<<<<<<<<<<<< TITLE AND VIDEO STYLING >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
+.title {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: dash 5s infinite alternate, filling 5s ease-in forwards;
+  font-size: 80px;
+}
 
+.title text {
+  font-weight: bolder;
+  font-style: normal;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 5;
+  }
+}
+
+@keyframes filling {
+  0%, 90% { fill: var(--font-color) ; fill-opacity: 0; }
+  100% { fill: var(--font-color); fill-opacity: 1; }
+}
 
 .title-container {
     text-align: center;
