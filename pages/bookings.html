@@ -106,27 +106,22 @@
 </div>
 </nav>
 
-<section>
+
 
     <div class="container-forms d-flex mx-auto py-4">
         <div class="row form-image mt-5 d-flex mx-auto">
-          <div class="col-md-4">
+          <div class="col-md-4 col-sm-12">
             <img src="../src/img/bookings_img.png" class="img-fluid forms-img" alt="about-image">
            
           </div>
-          <div class="col-md-6 d-flex  justify-content-center">
+          <div class="col-md-6 col-sm-12 d-flex  justify-content-center">
             <form class="row g-3 d-flex mx-auto" name="submit-to-google-sheet">
                 
-                <div class="col-md-2">
-                    <h1 class="about-title"><b>Bookings</b></h1>
-            
-                  </div>
-                  <div class="col-md-6 g-1 d-flex mx-auto">
-                    <p>Complete the form below to book Adie for an event.<br>We'll get back with you as soon as possible.</p>
-                  </div>
-                  <div class="col-md-1 g-1">
-                    <button type="submit" class="btn btn-primary">Send</button>
-                  </div>
+              <div class="contact-title">
+                <h1 class="about-title fw-bold">Bookings &nbsp;</h1>
+                <p>Complete the form below to book Adie for an event.<br>We'll get back with you as soon as possible.</p>
+              </div>
+
                 <div class="col-md-6">
                   <label for="name" class="form-label">Event Name</label>
                   <input name="Event Name" type="name" class="form-control" id="event" placeholder="Event Name">
@@ -135,8 +130,8 @@
                         <label for="date" class="form-label">Event Date</label>
                         <div class="input-group date" id="datepicker" >
                             <input name="Event Date" type="text" class="form-control" placeholder="Select your preferred date">
-                            <span class="input-group-append">
-                                <span class="input-group-text bg-white d-block">
+                            <span class="input-group-append calendar">
+                                <span class="input-group-text  d-block ">
                                     <i class="fa fa-calendar"></i>
                                 </span>
                             </span>
@@ -170,27 +165,68 @@
                     <label for="exampleFormControlTextarea1" class="form-label">Message</label>
                     <textarea name="Message"  class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Type your message here..." required></textarea>
                 </div>
-                
-                <!-- <div class="col-12">
-                  <button type="submit" class="btn btn-primary">Send</button>
-                </div> -->
+                <div class="col-md-1 mt-3 mb-1 g-1">
+                  <button type="submit" class="send-button btn-primary">Send</button>
+                </div>
               </form>
           </div>
         </div>
     </div>
 
-</section>
 
 
 
-<footer class="bg-dark text-center text-lg-start">
+
+
+  <footer class="d-flex justify-content-center align-content-center bg-dark main-footer">
+    
+    <div class="text-center py-1">
+      <ul>
+        <li>
+          <a href="https://open.spotify.com/artist/1DlYnIiliftt6R21Y5NOW2?si=35OGbZpkTeq0M-5BpJSRCg"
+            target="_blank">
+            <i class="bi-spotify"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://music.apple.com/nz/artist/adie/1539721258" target="_blank">
+            <i class="bi-music-note-beamed"></i>
+          </a>
+        </li>
   
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        Copyright 2023 &#169; O/C Records Philippines. All rights reserved.
-        |&nbsp;<span><strong>@Khim1111</strong></span>
-    </div>
-
+        <li>
+          <a href="https://www.youtube.com/@OCRecordsPH" target="_blank">
+            <i class="bi-youtube"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://soundcloud.com/adadieee" target="_blank">
+            <i class="fa-brands fa-soundcloud" target="_blank"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.tiktok.com/@adadieee?lang=en" target="_blank">
+            <i class="bi-tiktok"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/adadieeeee" target="_blank">
+            <i class="bi-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/adadieee/?hl=en" target="_blank">
+            <i class="bi-instagram"></i>
+          </a>
+        </li>
+      </ul>
+      Copyright &#169; O/C Records. All rights reserved.
+        |&nbsp;<span><strong>@Khim1111</strong></span></div>
+  </div>
   </footer>
+
+
+ 
   
 
 
@@ -220,6 +256,7 @@
       .catch(error => console.error('Error!', error.message))
   });
 </script>
+
 
 </body>
 </html>

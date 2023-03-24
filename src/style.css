@@ -32,6 +32,7 @@
   --font-color-2: #010101;
   --font-color-3: #6e1c6d3f;
   --font-color-4: #EFEFEF;
+  --font-color-5:#BBBBBB;
   --color-bg: #a3b6df75;
   --primary-color: #BFACE2;
   --accent-color: #655DBB;
@@ -597,6 +598,26 @@
   color: var(--font-color-4);
   
 }
+.send-button {
+  padding: 1rem 1.5rem;
+  margin: 2.5%;
+  background-color: transparent;
+  border: 0.1rem solid var(--font-color);
+  color: var(--font-color);
+  font-size: var(--normal-font-size);
+  text-transform: capitalize;
+  cursor: pointer;
+  border-radius: var(--button-radius);
+}
+.send-button:hover {
+  color: var(--font-color-2);
+  background-color: var(--font-color);
+  transition: 0.5s ease-in-out;
+}
+
+.form-control, .calendar{
+  background-color: var(--font-color-5) !important;
+}
 
 .container-forms{
   margin-top: 6rem;
@@ -605,4 +626,46 @@
   margin-top: 5rem;
 }
 
+.contact-title{
+  display: flex;
+justify-content: center;
+}
+.main-footer{
+
+    position: relative;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    color: var(--font-color);
+    font-size: 1rem;
+}
+.main-footer ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 0 0 1rem;
+}
+
+.main-footer ul li a {
+  text-decoration: none;
+  color: var(--font-color);
+  font-size: 1rem;
+  font-weight: var(--header-weight);
+  cursor: pointer;
+}
+
+
+.main-footer ul li a:hover {
+  border-bottom: 0.1rem solid var(--color-bg);
+  transition: width 2s;
+}
+
+.main-footer ul li a:hover::after {
+  width: 100%;
+  border-bottom: 0.1rem solid var(--font-color);
+  transition: width 2s;
+}
 /************************************* END OF BOOKINGS PAGE ***************************************************************/
