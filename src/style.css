@@ -76,7 +76,9 @@
   color:var(--font-color-4) !important;
 }
 
-
+.logo{
+  width: auto;
+}
 
 
 .navbar-toggler {
