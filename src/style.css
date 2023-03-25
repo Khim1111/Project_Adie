@@ -22,10 +22,12 @@
 }
 
   
-@font-face {
+/* @font-face {
   font-family: adie;
   src: url(./fonts/quentin.woff);
-}
+} */
+
+@import url('https://fonts.cdnfonts.com/css/quentin');
 
 :root {
   --font-color: #ffffff;
@@ -200,7 +202,8 @@
   .title {
     font-size: var(--title-font-size2);
     font-weight: var(--title-weight);
-    font-family: adie, sans-serif !important;
+    /* font-family: adie, sans-serif !important; */
+    font-family: 'Quentin', sans-serif;
     text-transform: capitalize;
     color: white;
   
@@ -527,7 +530,7 @@ background-color: var(--font-color);
 }
 
 .about-title{
-  font-family: adie, sans-serif !important;
+  font-family: 'Quentin', sans-serif !important;
   color: var(--font-color-8);
 }
 h5{
@@ -606,7 +609,7 @@ h5{
 
 .bookings-title{
   color: var(--font-color-8);
-  font-family: 'adie';
+  font-family: 'Quentin', sans-serif;;
 }
 .send-button {
   padding: 1rem 1.5rem;
